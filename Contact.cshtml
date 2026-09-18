@@ -1,0 +1,32 @@
+@page
+@model ContactModel
+
+<h1>Contact Us</h1>
+
+<form method="post">
+
+    <div>
+        <label asp-for="Contact.Name"></label>
+        <input asp-for="Contact.Name" />
+        <span asp-validation-for="Contact.Name"></span>
+    </div>
+
+    <div>
+        <label asp-for="Contact.Email"></label>
+        <input asp-for="Contact.Email" />
+        <span asp-validation-for="Contact.Email"></span>
+    </div>
+
+    <div>
+        <label asp-for="Contact.Message"></label>
+        <textarea asp-for="Contact.Message"></textarea>
+        <span asp-validation-for="Contact.Message"></span>
+    </div>
+
+    <button type="submit">Send Message</button>
+
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
